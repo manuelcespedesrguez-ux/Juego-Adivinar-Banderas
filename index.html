@@ -1,25 +1,37 @@
 <!doctype html>
-<html lang="en">
-
-<head>
+<html lang="es">
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <title>Adivina la bandera</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
-    <h1>Paises</h1>
-    <div id="marcador" style="background-color: rgb(1, 91, 156); align-items: center;">
-        <span id="aciertos" style="color: greenyellow;">Aciertos: 0</span>
-        <span id="fallos" style="color: red;">Fallos: 0</span>
+  <body>
+    <div>
+      <h1>Países</h1>
+      <div id="marcador">
+        <span id="aciertos">Aciertos: 0</span>
+        <span id="fallos">Fallos: 0</span>
+      </div>
+      <div id="resultado" class="flag-container">Cargando bandera...</div>
+      <form id="form" hidden>
+        <input
+          id="pais"
+          type="text"
+          placeholder="Escribe el país (en inglés)"
+          autocomplete="off"
+          required
+        />
+        <button id="botonResponder" type="submit">Responder</button>
+      </form>
     </div>
-    <form id="form">
-        <input id="pais" type="text" />
-        <button id="botonResponder">Responder</button>
-    </form>
-    <div id="resultado"></div>
-    <script src="app.js"></script>
-</body>
-
+    <script type="module" src="./app.js"></script>
+  </body>
 </html>
